@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+	<Type Name="string">
+		<DisplayString>{data,[count]}</DisplayString>
+		<StringView>data,[count]</StringView>
+	</Type>
+	<Type Name="a&lt;*&gt;">
+		<DisplayString Condition="count==0">[{count}] {"$T1",sb}</DisplayString>
+		<DisplayString Condition="count>0">[{count}] {"$T1",sb}: {data[0]}</DisplayString>
+		<Expand>
+		<ArrayItems>
+			<Size>count</Size>
+			<ValuePointer>data</ValuePointer>
+	    	</ArrayItems>
+		</Expand>
+	</Type>
+</AutoVisualizer>
