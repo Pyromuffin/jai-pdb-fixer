@@ -14,4 +14,14 @@
 	    	</ArrayItems>
 		</Expand>
 	</Type>
+	<Type Name="vec&lt;*&gt;">
+		<DisplayString Condition="count==0">[{count}] {"$T1",sb}</DisplayString>
+		<DisplayString Condition="count>0">[{count}] {"$T1",sb}: {data[0]}</DisplayString>
+		<Expand>
+		<ArrayItems>
+			<Size>count</Size>
+			<ValuePointer>data</ValuePointer>
+	    	</ArrayItems>
+		</Expand>
+	</Type>
 </AutoVisualizer>
